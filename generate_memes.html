@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Href Attribute Example</title>
+    <style>
+		img{
+		    max-height:500px;
+		    max-width:500px;
+		    height:auto;
+		    width:auto;
+		}
+      .img-container {
+        text-align: center;
+      }
+      a { 
+	    font-size: 120%; 
+	    font-family: Verdana, Arial, Helvetica, sans-serif; 
+	    color: #157bfb;
+	   }
+
+    </style>
+    <script>
+	var xhr = new XMLHttpRequest();
+	var url = "http://207.154.218.146:30999/getRandomMem";
+	xhr.open("GET", url, true);
+	xhr.setRequestHeader("Content-Type", "application/json");
+	xhr.onreadystatechange = function () {
+	    if (xhr.status === 200) {
+	        var json = JSON.parse(xhr.responseText);
+	        console.log(json);
+	        var image = document.getElementById("image")
+			image.src = json.url;  
+	    }
+	};
+	var data = JSON.stringify({"email": "hey@mail.com", "password": "101010"});
+	xhr.send(data);
+	</script>
+  </head>
+  <body>
+    
+    <div  class="img-container"> <!-- Block parent element -->
+    	<h1>Генератор мемов</h1>
+    	<p><img id="image" src="https://phonoteka.org/uploads/posts/2022-02/1644979225_27-phonoteka-org-p-dlinnii-chernii-fon-37.jpg"></p>
+      
+      <p><a href="javascript:document.location.reload();">Генерировать мем</a></p>
+    </div>
+
+
+    
+
+  </body>
+</html>
