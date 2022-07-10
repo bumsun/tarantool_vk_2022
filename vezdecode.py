@@ -68,8 +68,13 @@ def add_margin(pil_img, top, right, bottom, left, color):
 
 @app.get("/getMem")
 async def getMem(id: str = None):
-	url = "http://207.154.218.146/"+mems.select(int(id))[0][3].split("/")[3]
-	return {"url": url}
+	try:
+		url = "http://207.154.218.146/"+mems.select(int(id))[0][3].split("/")[3]
+		return {"url": url}
+	except Exception as e:
+		return {"Ошибка": "Мемов с таким id нет"}
+
+	
 
 
 @app.get("/getRandomMem")
