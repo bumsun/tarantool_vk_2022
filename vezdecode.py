@@ -95,7 +95,7 @@ async def getRandomMem():
 	xbottom = round(320 - (320 * len(bottom_text) /65))
 	draw.text((xtop, 50),top_text[:70] ,font=font)
 
-	draw.text((xbottom, 620),bottom_text[:70] ,font=font)
+	draw.text((xbottom, 600),bottom_text[:70] ,font=font)
 	
 	image_data.save(out_file_path)
 
@@ -126,7 +126,7 @@ async def setMem(top_text: str = Form(...), bottom_text: str = Form(...), file: 
 		xbottom = round(320 - (320 * len(bottom_text) /65))
 		draw.text((xtop, 50),top_text[:70] ,font=font)
 
-		draw.text((xbottom, 620),bottom_text[:70] ,font=font)
+		draw.text((xbottom, 600),bottom_text[:70] ,font=font)
 		
 		image_data.save(out_file_path)
 
@@ -172,7 +172,7 @@ async def setMemWithoutText(top_text: str = Form(...), bottom_text: str = Form(.
 	xbottom = round(320 - (320 * len(bottom_text) /65))
 	draw.text((xtop, 50),top_text[:70] ,font=font)
 
-	draw.text((xbottom, 620),bottom_text[:70] ,font=font)
+	draw.text((xbottom, 600),bottom_text[:70] ,font=font)
 	
 	image_data.save(out_file_path)
 
@@ -220,7 +220,7 @@ async def setMemWithoutText(file: UploadFile = File(...)):
 		xbottom = round(320 - (320 * len(bottom_text) /65))
 		draw.text((xtop, 50),top_text[:70] ,font=font)
 
-		draw.text((xbottom, 620),bottom_text[:70] ,font=font)
+		draw.text((xbottom, 600),bottom_text[:70] ,font=font)
 		
 		image_data.save(out_file_path)
 
@@ -292,7 +292,7 @@ async def setMemChangeColor(top_text: str = Form(...), bottom_text: str = Form(.
 		xbottom = round(320 - (320 * len(bottom_text) /65))
 		draw.text((xtop, 50),top_text[:70] ,font=font)
 
-		draw.text((xbottom, 620),bottom_text[:70] ,font=font)
+		draw.text((xbottom, 600),bottom_text[:70] ,font=font)
 		
 		image_data.save(out_file_path)
 
